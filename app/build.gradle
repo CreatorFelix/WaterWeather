@@ -19,6 +19,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets {
+        main {
+            jniLibs.srcDirs 'libs'
+            jni.srcDirs = []
+        }
+    }
 }
 
 greendao {
@@ -49,8 +55,11 @@ dependencies {
     implementation 'org.greenrobot:greendao:3.2.2'
     implementation 'org.greenrobot:greendao-generator:3.2.2'
     implementation 'net.zetetic:android-database-sqlcipher:3.5.9'
+    //data
+    implementation 'com.orhanobut:hawk:2.0.1'
     //leak detection
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
     releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
-    implementation 'com.orhanobut:hawk:2.0.1'
+    //map
+    implementation files('libs/BaiduLBS_Android.jar')
 }
