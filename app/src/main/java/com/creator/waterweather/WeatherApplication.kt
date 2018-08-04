@@ -1,6 +1,7 @@
 package com.creator.waterweather
 
 import android.app.Application
+import com.orhanobut.hawk.Hawk
 import com.squareup.leakcanary.LeakCanary
 
 class WeatherApplication : Application() {
@@ -8,6 +9,7 @@ class WeatherApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         initLeakDetection()
+        initHawk()
     }
 
     private fun initLeakDetection() {
@@ -15,4 +17,6 @@ class WeatherApplication : Application() {
             LeakCanary.install(this)
         }
     }
+
+    private fun initHawk() = Hawk.init(this).build()
 }
