@@ -2,10 +2,11 @@ package com.creator.waterweather.data.source.local.greendao
 
 import android.content.Context
 import com.creator.waterweather.data.City
-import com.creator.waterweather.data.source.local.greendao.gen.CityDao
 import com.creator.waterweather.data.source.local.greendao.gen.DaoMaster
 import com.creator.waterweather.data.source.local.greendao.gen.DaoSession
+import com.creator.waterweather.data.source.local.greendao.gen.UserCityDao
 import com.creator.waterweather.extension.APP_DATABASE_NAME
+import com.creator.waterweather.extension.warning
 
 class DaoManager private constructor(context: Context) {
 
@@ -41,8 +42,26 @@ class DaoManager private constructor(context: Context) {
         }
     }
 
-    fun querySelectedCities(): List<City> = daoSession?.cityDao?.queryBuilder()
-            ?.where(CityDao.Properties.Selected.eq(true))
-            ?.orderAsc(CityDao.Properties.Priority)
-            ?.list() ?: emptyList()
+    fun queryUserCities(): List<City> {
+        val userCities = daoSession?.userCityDao?.queryBuilder()
+                ?.orderAsc(UserCityDao.Properties.Priority)
+                ?.list()
+        if (userCities == null || userCities.isEmpty()) {
+            return emptyList()
+        }
+        return List(userCities.size) { City(userCities[it]) }
+    }
+
+    fun addUserCity(city: City): Boolean {
+        val founds = daoSession?.userCityDao?.queryBuilder()
+                ?.where(UserCityDao.Properties.Name.eq(city.name))?.list()
+        if (founds != null && founds.isNotEmpty()) {
+            warning("City[${city.name}] has been added before!")
+            return false
+        }
+        val count = daoSession?.userCityDao?.queryBuilder()?.count() ?: 0
+        val rowID = daoSession?.userCityDao?.insert(city.toUserCity()
+                .apply { priority = (count + 1).toInt() })
+        return rowID == null
+    }
 }

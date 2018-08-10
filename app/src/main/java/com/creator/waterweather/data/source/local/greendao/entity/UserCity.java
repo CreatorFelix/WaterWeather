@@ -1,33 +1,31 @@
-package com.creator.waterweather.data;
+package com.creator.waterweather.data.source.local.greendao.entity;
 
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
 import org.greenrobot.greendao.annotation.Generated;
 
 @Entity
-public class City {
+public class UserCity {
 
-    @Id(autoincrement = true)
+    @Id()
     private long cityId;
     private String name;
     private String parentCity;
     private String adminArea;
     private String country;
-    private boolean selected;
     private int priority;
-    @Generated(hash = 475166051)
-    public City(long cityId, String name, String parentCity, String adminArea,
-            String country, boolean selected, int priority) {
+    @Generated(hash = 3839748)
+    public UserCity(long cityId, String name, String parentCity, String adminArea,
+            String country, int priority) {
         this.cityId = cityId;
         this.name = name;
         this.parentCity = parentCity;
         this.adminArea = adminArea;
         this.country = country;
-        this.selected = selected;
         this.priority = priority;
     }
-    @Generated(hash = 750791287)
-    public City() {
+    @Generated(hash = 1268263805)
+    public UserCity() {
     }
     public long getCityId() {
         return this.cityId;
@@ -58,12 +56,6 @@ public class City {
     }
     public void setCountry(String country) {
         this.country = country;
-    }
-    public boolean getSelected() {
-        return this.selected;
-    }
-    public void setSelected(boolean selected) {
-        this.selected = selected;
     }
     public int getPriority() {
         return this.priority;
