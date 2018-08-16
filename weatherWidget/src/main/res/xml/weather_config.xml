@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weathers>
+    <weather
+        name="cloudy"
+        class="com.creator.waterweather.widget.graphics.CloudyDrawable"
+        typeCode="1" />
+    <weather
+        name="sunny"
+        class="com.creator.waterweather.widget.graphics.SunnyDrawable"
+        typeCode="2" />
+</weathers>
