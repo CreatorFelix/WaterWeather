@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<weathers>
+    <weather name="Sunny" class="com.creator.waterweather.widget.graphics.SunnyDrawable" typeCode="100" />
+    <weather name="Cloudy" class="com.creator.waterweather.widget.graphics.CloudyDrawable" typeCode="101" />
+    <weather name="Few Clouds" class="" typeCode="102" />
+    <weather name="Partly Cloudy" class="" typeCode="103" />
+    <weather name="Overcast" class="" typeCode="104" />
+    <weather name="Windy" class="" typeCode="200" />
+    <weather name="Calm" class="" typeCode="201" />
+    <weather name="Light Breeze" class="" typeCode="202" />
+    <weather name="Moderate Breeze" class="" typeCode="203" />
+    <weather name="Fresh Breeze" class="" typeCode="204" />
+    <weather name="Strong Breeze" class="" typeCode="205" />
+    <weather name="High Wind" class="" typeCode="206" />
+    <weather name="Gale" class="" typeCode="207" />
+    <weather name="Strong Gale" class="" typeCode="208" />
+    <weather name="Storm" class="" typeCode="209" />
+    <weather name="Violent Storm" class="" typeCode="210" />
+    <weather name="Hurricane" class="" typeCode="211" />
+    <weather name="Tornado" class="" typeCode="212" />
+    <weather name="Tropical Storm" class="" typeCode="213" />
+    <weather name="Shower Rain" class="" typeCode="300" />
+    <weather name="Heavy Shower Rain" class="" typeCode="301" />
+    <weather name="Thundershower" class="" typeCode="302" />
+    <weather name="Heavy Thunderstorm" class="" typeCode="303" />
+    <weather name="Thundershower with Hail" class="" typeCode="304" />
+    <weather name="Light Rain" class="" typeCode="305" />
+    <weather name="Moderate Rain" class="" typeCode="306" />
+    <weather name="Heavy Rain" class="" typeCode="307" />
+    <weather name="Extreme Rain" class="" typeCode="308" />
+    <weather name="Drizzle Rain" class="" typeCode="309" />
+    <weather name="Storm" class="" typeCode="310" />
+    <weather name="Heavy Storm" class="" typeCode="311" />
+    <weather name="Severe Storm" class="" typeCode="312" />
+    <weather name="Freezing Rain" class="" typeCode="313" />
+    <weather name="Light to Moderate Rain" class="" typeCode="314" />
+    <weather name="Moderate to Heavy Rain" class="" typeCode="315" />
+    <weather name="Heavy Rain to Storm" class="" typeCode="316" />
+    <weather name="Storm to Heavy Storm" class="" typeCode="317" />
+    <weather name="Heavy to Severe Storm" class="" typeCode="318" />
+    <weather name="Rain" class="" typeCode="399" />
+    <weather name="Light Snow" class="" typeCode="400" />
+    <weather name="Moderate Snow" class="" typeCode="401" />
+    <weather name="Heavy Snow" class="" typeCode="402" />
+    <weather name="Snowstorm" class="" typeCode="403" />
+    <weather name="Sleet" class="" typeCode="404" />
+    <weather name="Rain And Snow" class="" typeCode="405" />
+    <weather name="Shower Snow" class="" typeCode="406" />
+    <weather name="Snow Flurry" class="" typeCode="407" />
+    <weather name="Light to Moderate Snow" class="" typeCode="408" />
+    <weather name="Moderate to Heavy Snow" class="" typeCode="409" />
+    <weather name="Heavy Snow to Snowstorm" class="" typeCode="410" />
+    <weather name="Snow" class="" typeCode="499" />
+    <weather name="Mist" class="" typeCode="500" />
+    <weather name="Foggy" class="" typeCode="501" />
+    <weather name="Haze" class="" typeCode="502" />
+    <weather name="Sand" class="" typeCode="503" />
+    <weather name="Dust" class="" typeCode="504" />
+    <weather name="Duststorm" class="" typeCode="507" />
+    <weather name="Sandstorm" class="" typeCode="508" />
+    <weather name="Dense Fog" class="" typeCode="509" />
+    <weather name="Strong Fog" class="" typeCode="510" />
+    <weather name="Moderate Haze" class="" typeCode="511" />
+    <weather name="Heavy Haze" class="" typeCode="512" />
+    <weather name="Severe Haze" class="" typeCode="513" />
+    <weather name="Heavy Fog" class="" typeCode="514" />
+    <weather name="Extra Heavy Fog" class="" typeCode="515" />
+    <weather name="Hot" class="" typeCode="900" />
+    <weather name="Cold" class="" typeCode="901" />
+    <weather name="Unknown" class="" typeCode="999" />
+</weathers>
