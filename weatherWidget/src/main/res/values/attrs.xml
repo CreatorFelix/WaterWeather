@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="WeatherView">
-        <attr name="drawableConfig" format="reference" />
+        <attr name="weatherProperties" format="reference" />
         <attr name="defaultDrawable" format="reference" />
     </declare-styleable>
 </resources>
